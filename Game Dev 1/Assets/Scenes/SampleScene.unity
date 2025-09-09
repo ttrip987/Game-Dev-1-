@@ -438,7 +438,7 @@ GameObject:
   - component: {fileID: 967191723}
   - component: {fileID: 967191722}
   - component: {fileID: 967191721}
-  - component: {fileID: 967191725}
+  - component: {fileID: 967191726}
   m_Layer: 0
   m_Name: Turret
   m_TagString: Untagged
@@ -537,33 +537,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!54 &967191725
-Rigidbody:
+--- !u!114 &967191726
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 967191720}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f43cf78fd7e35d14cae0818ab1ab6fcb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 1842693588}
+  bullet: {fileID: 8981677356574676628, guid: 43608c2177e9ba842b2873740c81c6ab, type: 3}
+  rate_of_fire: 0.2
+  shoot_timer: 0
 --- !u!1 &1733472815
 GameObject:
   m_ObjectHideFlags: 0
@@ -576,6 +565,7 @@ GameObject:
   - component: {fileID: 1733472819}
   - component: {fileID: 1733472818}
   - component: {fileID: 1733472817}
+  - component: {fileID: 1733472821}
   - component: {fileID: 1733472820}
   m_Layer: 0
   m_Name: Sphere
@@ -695,11 +685,24 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1733472821
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1733472815}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e057daeef3a7ce4a93161a72ce88a34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
 --- !u!1 &1842693588
 GameObject:
   m_ObjectHideFlags: 0
