@@ -35,6 +35,13 @@ public class PlayerMovement : MonoBehaviour
         Gizmos.color = Color.green;
         Gizmos.DrawLine(transform.position, transform.position + velocity);
         Gizmos.DrawLine(transform.position, transform.position + direction * 2);
+
+        Gizmos.color = Color.green;
+        Gizmos.DrawLine(transform.position, transform.position + Vector3.up * 2);
+
+        Gizmos.color = Color.cyan;
+        Vector3 axis = Vector3.Cross(bullet_dir, Vector3.up);
+        Gizmos.DrawLine(transform.position)
     }
 
 
